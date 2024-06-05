@@ -1,11 +1,11 @@
 <template>
   <Toast position="bottom-right" />
   <ConfirmDialog />
-  <transition name="fade">
+  <Transition name="fade" appear>
     <div class="loading" v-if="isLoading">
       <ProgressSpinner />
     </div>
-  </transition>
+  </Transition>
 
   <div class="layout">
     <header>Управление логистикой</header>

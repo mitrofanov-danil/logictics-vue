@@ -11,7 +11,6 @@
 body {
   background: $white;
   color: $general;
-  // min-height: 100vh;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
@@ -53,7 +52,7 @@ p {
 .fade-enter-active {
   transition: $transition-base;
 }
-.fade-enter-from,
+
 .fade-leave-to {
   opacity: 0;
 }
