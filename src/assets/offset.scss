@@ -1,0 +1,62 @@
+@mixin generateProperty($propName, $prop, $value) {
+  .#{$propName}-#{$value} {
+    #{$prop}: #{$value}px;
+  }
+}
+
+$props: (
+  'p': (
+    'padding'
+  ),
+  'pt': (
+    'padding-top'
+  ),
+  'pb': (
+    'padding-bottom'
+  ),
+  'pl': (
+    'padding-left'
+  ),
+  'pr': (
+    'padding-right'
+  ),
+  'm': (
+    'margin'
+  ),
+  'mt': (
+    'margin-top'
+  ),
+  'mb': (
+    'margin-bottom'
+  ),
+  'ml': (
+    'margin-left'
+  ),
+  'mr': (
+    'margin-right'
+  )
+);
+
+$propsGap: (
+  'c-gap': (
+    'column-gap'
+  ),
+  'r-gap': (
+    'row-gap'
+  ),
+  'gap': (
+    'gap'
+  )
+);
+
+@for $p from 0 to 81 {
+  @each $propName, $prop in $props {
+    @include generateProperty($propName, $prop, $p);
+  }
+}
+
+@for $p from 0 to 81 {
+  @each $propName, $prop in $propsGap {
+    @include generateProperty($propName, $prop, $p);
+  }
+}
